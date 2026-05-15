@@ -1,13 +1,12 @@
 #include "CameraProvider.hpp"
 
-
 CameraProvider::CameraProvider(std::string source) {
     if (source == "0") {
         cap.open(0);
     } else {
         cap.open(source);
     }
-
+}
 
 cv::Mat CameraProvider::getFrame() {
     cv::Mat frame;
@@ -17,3 +16,4 @@ cv::Mat CameraProvider::getFrame() {
 
 bool CameraProvider::isOpened() {
     return cap.isOpened();
+}
