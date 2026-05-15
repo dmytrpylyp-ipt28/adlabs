@@ -1,7 +1,11 @@
 #include "CameraProvider.hpp"
 
-CameraProvider::CameraProvider(int deviceID) {
-    cap.open(deviceID);
+CameraProvider::CameraProvider(std::string source) {
+    if (source == "0") {
+        cap.open(0);
+    } else {
+        cap.open(source);
+    }
 }
 
 cv::Mat CameraProvider::getFrame() {

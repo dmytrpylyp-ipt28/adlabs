@@ -2,10 +2,12 @@
 #define CAMERA_PROVIDER_HPP
 
 #include <opencv2/opencv.hpp>
+#include <string>
 
 class CameraProvider {
 public:
-    CameraProvider(int deviceID = 0);
+    // Конструктор тепер приймає рядок (шлях до відео або "0" для камери)
+    CameraProvider(std::string source);
     cv::Mat getFrame();
     bool isOpened();
 private:
