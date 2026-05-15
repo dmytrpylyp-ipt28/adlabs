@@ -4,7 +4,7 @@
 #include "KeyProcessor.hpp"
 
 int main() {
-    CameraProvider camera(0);
+    CameraProvider camera("demo.mp4");
     if (!camera.isOpened()) {
         std::cerr << "Error: Camera not found!" << std::endl;
         return -1;
