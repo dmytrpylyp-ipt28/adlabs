@@ -4,7 +4,9 @@
 #include "KeyProcessor.hpp"
 
 int main() {
+
     CameraProvider camera("demo.mp4");
+
     if (!camera.isOpened()) {
         std::cerr << "Error: Camera not found!" << std::endl;
         return -1;
@@ -33,4 +35,5 @@ int main() {
 
     cv::destroyAllWindows();
     return 0;
+
 }

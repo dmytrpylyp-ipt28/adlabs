@@ -2,6 +2,7 @@
 #define CAMERA_PROVIDER_HPP
 
 #include <opencv2/opencv.hpp>
+
 #include <string>
 
 class CameraProvider {
