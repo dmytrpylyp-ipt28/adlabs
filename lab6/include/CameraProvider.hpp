@@ -6,7 +6,6 @@
 
 class CameraProvider {
 public:
-    // Конструктор тепер приймає рядок (шлях до відео або "0" для камери)
     CameraProvider(std::string source);
     cv::Mat getFrame();
     bool isOpened();
