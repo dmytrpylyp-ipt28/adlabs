@@ -17,3 +17,4 @@ cv::Mat CameraProvider::getFrame() {
 
 bool CameraProvider::isOpened() {
     return cap.isOpened();
+
